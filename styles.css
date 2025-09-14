@@ -1,0 +1,61 @@
+/* ====== CSS versión oscura (dark theme) para Básquet Perform Style ====== */
+*{box-sizing:border-box}body{margin:0;font-family:'Montserrat',sans-serif;background:#0d0d0d;color:#f4f4f4}
+.navbar{background:rgba(0,0,0,0.95);position:fixed;width:100%;top:0;left:0;z-index:1000;backdrop-filter:blur(6px)}
+.navbar nav{display:flex;justify-content:center;gap:30px;padding:15px 0}
+.navbar a{color:#f4f4f4;text-decoration:none;font-weight:600;transition:color .25s,transform .25s}
+.navbar a:hover{color:#ffcc00;transform:translateY(-2px)}
+.section{max-width:1000px;margin:100px auto 40px auto;padding:20px;color:#f4f4f4}
+
+/* Hero slideshow */
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.slideshow::before{content:"";position:absolute;inset:0;background-size:cover;background-position:center;animation:slideshow 25s infinite;z-index:0;transition:background-image 1s ease-in-out}
+@keyframes slideshow{
+  0%{background-image:url('https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600')}
+  20%{background-image:url('https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600')}
+  40%{background-image:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600')}
+  60%{background-image:url('https://images.unsplash.com/photo-1531884070720-875c7622d4a1?q=80&w=1600')}
+  80%{background-image:url('https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?q=80&w=1600')}
+  100%{background-image:url('https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600')}
+}
+.hero .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:1;padding:20px}
+.hero-content{text-align:center;color:#fff;z-index:2;padding:20px;max-width:900px}
+.hero-content h1{font-family:'Russo One',sans-serif;font-size:3.5rem;margin-bottom:15px;text-transform:uppercase;letter-spacing:2px;color:#ffcc00}
+.hero-content p{font-size:1.3rem;font-weight:500;margin-bottom:20px;color:#fff}
+.btn{display:inline-block;padding:12px 25px;background:linear-gradient(45deg,#ffcc00,#ffaa00);color:#000;font-weight:700;border-radius:30px;text-decoration:none;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,0.6)}
+
+/* Table / catalog en dark theme */
+.table-wrap{overflow-x:auto;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;font-family:'Teko',sans-serif;color:#f4f4f4;box-shadow:0 8px 24px rgba(0,0,0,.5);border-radius:12px;overflow:hidden}
+th{background:#111;color:#ffcc00;text-transform:uppercase;padding:14px;font-size:1.1rem;letter-spacing:1px}
+td{padding:16px;text-align:center;font-weight:600;background:#1a1a1a;color:#f4f4f4;font-size:1.1rem}
+tbody tr:nth-child(even){background:#222}tbody tr:nth-child(odd){background:#1a1a1a}
+tbody tr:hover{background:rgba(255,204,0,0.2);transition:background .25s}
+
+/* títulos dentro del catálogo */
+.section h2{color:#ffcc00;text-align:center;margin-bottom:20px;font-family:'Russo One',sans-serif}
+
+/* club cell with crest */
+.club-cell{display:flex;align-items:center;gap:10px;justify-content:center}
+.escudo{width:28px;height:28px;object-fit:contain;display:inline-block;vertical-align:middle;border-radius:4px}
+.club-name{font-family:'Montserrat',sans-serif;font-weight:700;color:#f4f4f4}
+
+/* Contact form */
+.contacto-section{display:flex;justify-content:center;align-items:center;text-align:center}
+.contacto-overlay{background:rgba(20,20,20,0.9);padding:40px;border-radius:20px;max-width:700px;width:100%;color:#fff;box-shadow:0 6px 30px rgba(0,0,0,0.8)}
+.contacto-overlay h2{font-family:'Russo One',sans-serif;font-size:2.2rem;margin-bottom:10px;color:#ffcc00}
+form{display:grid;gap:15px}
+.input-group{display:flex;align-items:center;background:#1a1a1a;border:2px solid #333;border-radius:10px;padding:10px;transition:all .25s}
+.input-group i{margin-right:10px;color:#ffcc00;font-size:1.2rem;width:28px;text-align:center}
+.input-group input,.input-group textarea{border:none;background:transparent;outline:none;flex:1;font-size:1rem;font-family:'Montserrat',sans-serif;color:#f4f4f4}
+.input-group:focus-within{border-color:#ffcc00;box-shadow:0 0 10px rgba(255,204,0,.8)}
+button{padding:12px 18px;background:linear-gradient(45deg,#ffcc00,#ffaa00);color:#000;font-family:'Russo One',sans-serif;font-size:1.05rem;border-radius:30px;border:none;cursor:pointer;transition:transform .18s,background .25s}
+button:hover{transform:scale(1.03);background:linear-gradient(45deg,#ffaa00,#ff8800)}
+
+/* backgrounds */
+.page-bg-catalogo{background:url('https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1600') center/cover fixed no-repeat;min-height:100vh}
+.page-bg-contacto{background:url('https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600') center/cover fixed no-repeat;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.page-bg-gracias{background:url('https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600') center/cover fixed no-repeat;min-height:100vh;display:flex;align-items:center;justify-content:center}
+
+/* responsive */
+@media(max-width:720px){.hero-content h1{font-size:2.2rem}.hero-content p{font-size:1rem}table th,table td{font-size:.9rem;padding:10px}.contacto-overlay{padding:20px;margin:20px}.navbar nav{gap:14px}}

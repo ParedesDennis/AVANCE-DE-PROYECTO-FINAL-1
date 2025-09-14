@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contáctanos - BPS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&family=Russo+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="page-bg-contacto">
+  <header class="navbar">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="contacto.html">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="section contacto-section">
+    <div class="contacto-overlay">
+      <h2>Contáctanos</h2>
+      <p>Déjanos tus datos y consulta, y te responderemos a la brevedad.</p>
+
+      <form action="gracias.html" method="get">
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="input-group textarea-group">
+          <i class="fa-solid fa-message"></i>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+        </div>
+
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 BPS: Básquet Perform Style</p>
+  </footer>
+</body>
+</html>
